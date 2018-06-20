@@ -159,6 +159,8 @@ Setting constant | Description
 * In iOS, this plugin generates a URL scheme for the *-Info.plist configurations file.
 * The plugin for Android is based on the forked repository and was refactored. The iOS part was built from skretch.
 
+* Now in the bitradteam repository!
+
 ## License
 ```
 The MIT License
