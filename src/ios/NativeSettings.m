@@ -14,7 +14,11 @@
 {
 	CDVPluginResult* pluginResult = nil;
 	NSString* key = [command.arguments objectAtIndex:0];
-	NSString* prefix = @"App-Prefs:";
+	if(SYSTEM_VERSION_LESS_THAN(@"11.3")){
+		NSString* prefix = @"App-Prefs:"; 
+	} else {
+		NSString* prefix = @"prefs:";
+	}
 	BOOL result = NO;
 
 	if(SYSTEM_VERSION_LESS_THAN(@"11.3")){
@@ -23,7 +27,11 @@
 
 	
     if ([key isEqualToString:@"application_details"]) {
-        result = [self do_open:UIApplicationOpenSettingsURLString];
+	    if(SYSTEM_VERSION_LESS_THAN(@"11.3")){
+		    result = [self do_open:UIApplicationOpenSettingsURLString];
+	    } else {
+		    result = [self do_open:UIApplication.openSettingsURLString];
+	    }
     }
 	else if ([key isEqualToString:@"settings"]) {
 		result = [self do_open:prefix];
