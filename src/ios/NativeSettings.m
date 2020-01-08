@@ -23,11 +23,7 @@
 
 	
     if ([key isEqualToString:@"application_details"]) {
-	    if(SYSTEM_VERSION_LESS_THAN(@"11.3")){
-		    result = [self do_open:UIApplicationOpenSettingsURLString];
-	    } else {
-		    result = [self do_open:UIApplication.openSettingsURLString];
-	    }
+	    result = [self do_open:UIApplicationOpenSettingsURLString];
     }
 	else if ([key isEqualToString:@"settings"]) {
 		result = [self do_open:prefix];
