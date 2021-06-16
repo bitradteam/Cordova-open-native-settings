@@ -20,7 +20,7 @@ cordova plugin (add|rm) cordova-open-native-settings --save
 or via npm (It will be saved to the package.json file)
 
 ```bash
-npm (install|rm) cordova-open-native-settings --save
+npm (install|uninstall) cordova-open-native-settings --save
 ```
 
 ## Using the plugin (opens Location Settings in Android and Application Settings in iOS)
@@ -61,6 +61,7 @@ Setting constant | Description
 "application_development" | Show settings to allow configuration of application development-related settings
 "application" | Show settings to allow configuration of application-related settings
 "battery_optimization" | Show screen for controlling which apps can ignore battery optimizations
+"biometric" | Show screen for configuring biometric based device security
 "bluetooth" | Show settings to allow configuration of Bluetooth
 "captioning" | Show settings for video captioning
 "cast" | Show settings to allow configuration of cast endpoints
@@ -80,6 +81,7 @@ Setting constant | Description
 "nfcsharing" | Show NFC Sharing settings
 "nfc_payment" | Show NFC Tap & Pay settings
 "nfc_settings" | Show NFC settings
+"notification_id" | Settings > Notifications
 "print" | Show the top level print settings
 "privacy" | Show settings to allow configuration of privacy options
 "quick_launch" | Show settings to allow configuration of quick launch shortcuts
@@ -124,6 +126,7 @@ Setting constant | Description
 "locale" | Settings > General > Language & Region
 "location" | Settings > Location Services (in older versions of iOS)
 "locations" | Settings > Privacy > Location Services (in newer versions of iOS)
+"tracking" | Settings > Privacy > Tracking (iOS 14+)
 "mobile_data" | Settings > Mobile Data (after iOS 10)
 "music" | Settings > iTunes
 "music_equalizer" | Settings > Music > EQ
